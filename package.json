@@ -1,0 +1,36 @@
+{
+  "name": "@rwxmad/library-template",
+  "version": "0.0.0",
+  "description": "library",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "mkdir -p lib && tsup src/index.ts -d lib --target=node22 --format=esm --clean --no-splitting --dts",
+    "format": "prettier \"**/*.{js,jsx,json,tsx,ts}\" --write",
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint . --fix",
+    "test": "tsc && jest"
+  },
+  "author": {
+    "name": "rwxmad",
+    "email": "rwxmad@gmail.com"
+  },
+  "homepage": "https://github.com/rwxmad/library-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwxmad/library-template"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rwxmad/eslint-plugin": "^1.1.3",
+    "@rwxmad/prettier-config": "^0.1.0",
+    "eslint": "^9.30.1",
+    "jest": "^30.0.3",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0"
+  }
+}
